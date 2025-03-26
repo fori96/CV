@@ -1,0 +1,23 @@
+.sideMenu {
+  border-right: 1px solid red;
+  height: 100%;
+  min-width: 100%;
+  background-color: transparent;
+  flex: auto;
+  flex-direction: column;
+  display: block;
+
+  .menu {
+    background-color: transparent;
+  }
+}
+
+.menuItem {
+  width: auto;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin: auto;
+  padding: 8px 16px;
+}
