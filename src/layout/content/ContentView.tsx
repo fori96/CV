@@ -1,3 +1,5 @@
+import "./Content.css";
+
 import React, { ReactElement } from "react";
 import SideMenu, { SideMenuViewModel } from "../sideMenu/SideMenuView";
 

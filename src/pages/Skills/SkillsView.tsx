@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import View from "../View";
+import View from "../../View";
 
 export interface SkillsViewModel {
   loading: boolean;

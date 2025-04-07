@@ -2,6 +2,7 @@ import "./header.css";
 
 import React, { ReactElement } from "react";
 
+import { NavLink } from "react-router-dom";
 import View from "../../View";
 import logo from "../../logo.svg";
 
@@ -16,8 +17,12 @@ export class Header extends View<HeaderViewModel> {
     return (
       <React.Fragment>
         <div className="header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <label className="App-title">Learn React</label>
+          <NavLink to="/Home">
+            <div>
+              <img src={logo} className="App-logo" alt="logo" />
+              <label className="App-title">Önéletrajz</label>
+            </div>
+          </NavLink>
         </div>
       </React.Fragment>
     );

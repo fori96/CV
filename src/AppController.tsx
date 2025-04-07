@@ -2,7 +2,7 @@ import { AppviewModel } from "./App";
 import ContentController from "./layout/content/ContentController";
 import { Controller } from "./Controller";
 import HeaderController from "./layout/header/HeaderController";
-import HomeController from "./pages/HomeController";
+import HomeController from "./pages/Home/HomeController";
 import SideMenuController from "./layout/sideMenu/SideMenuController";
 //import React from "react";
 //import { ReactElement } from "react";

@@ -1,7 +1,8 @@
 .sideMenu {
   border-right: 1px solid red;
-  height: 100%;
-  min-width: 100%;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
   background-color: transparent;
   flex: auto;
   flex-direction: column;
@@ -9,15 +10,16 @@
 
   .menu {
     background-color: transparent;
+
+    .ant-menu-item {
+      margin: 25px 0px;
+      padding: 25px 0px;
+    }
   }
 }
 
-.menuItem {
-  width: auto;
-  text-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  margin: auto;
-  padding: 8px 16px;
+.ant-menu-item-selected {
+  background-color: transparent !important;
+  text-decoration: none !important;
+  color: black !important;
 }

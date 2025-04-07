@@ -2,16 +2,16 @@ import "./App.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Content, { ContentViewModel } from "./layout/content/ContentView";
-import Home, { HomeViewModel } from "./pages/HomeView";
+import Home, { HomeViewModel } from "./pages/Home/HomeView";
 import React, { ReactElement } from "react";
 
-import BasicInformation from "./pages/BasicInformationView";
+import BasicInformation from "./pages/BasicInformation/BasicInformationView";
 import { HeaderViewModel } from "./layout/header/HeaderView";
 import { SideMenuViewModel } from "./layout/sideMenu/SideMenuView";
-import Skills from "./pages/SkillsView";
-import Studies from "./pages/StudiesView";
+import Skills from "./pages/Skills/SkillsView";
+import Studies from "./pages/Studies/StudiesView";
 import { View } from "./View";
-import Workplaces from "./pages/WorkplacesView";
+import Workplaces from "./pages/Works/WorkplacesView";
 
 //import { observer } from "mobx-react";
 

@@ -1,5 +1,5 @@
 import { BasicInformationViewModel } from "./BasicInformationView";
-import { Controller } from "../Controller";
+import { Controller } from "../../Controller";
 
 export class BasicInformationController
   implements Controller<BasicInformationViewModel>

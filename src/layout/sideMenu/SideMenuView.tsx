@@ -14,10 +14,6 @@ type MenuItem = Required<MenuProps>["items"][number];
 
 const items: MenuItem[] = [
   {
-    key: "sub0",
-    label: <NavLink to="/Home">Főoldal</NavLink>,
-  },
-  {
     key: "sub1",
     label: <NavLink to="/BasicInformation">Alapadatok</NavLink>,
   },
@@ -44,7 +40,7 @@ export class SideMenu extends View<SideMenuViewModel> {
     return (
       <React.Fragment>
         <Sider className="sideMenu">
-          <Menu className="menu" mode="inline" items={items} />
+          <Menu className="menu" mode="inline" items={items} activeKey="none" />
         </Sider>
       </React.Fragment>
     );

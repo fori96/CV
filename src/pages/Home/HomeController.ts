@@ -1,4 +1,4 @@
-import { Controller } from "../Controller";
+import { Controller } from "../../Controller";
 import { HomeViewModel } from "./HomeView";
 
 export class HomeController implements Controller<HomeViewModel> {

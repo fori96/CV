@@ -1,4 +1,4 @@
-import { Controller } from "../Controller";
+import { Controller } from "../../Controller";
 import { StudiesViewModel } from "./StudiesView";
 
 export class StudiesController implements Controller<StudiesViewModel> {

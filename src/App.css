@@ -1,3 +1,10 @@
 .App {
   background-color: #8a8a8a;
+
+  height: 100%;
+  margin: 0;
+}
+
+.ant-menu-item-selected {
+  background-color: aqua;
 }

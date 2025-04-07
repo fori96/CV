@@ -1,0 +1,13 @@
+h2 {
+  position: absolute;
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-section {
+  width: 100%;
+  position: absolute;
+  margin-top: 7%;
+  text-align: center;
+}
