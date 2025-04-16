@@ -38,11 +38,9 @@ export interface SideMenuViewModel {
 export class SideMenu extends View<SideMenuViewModel> {
   render(): ReactElement {
     return (
-      <React.Fragment>
-        <Sider className="sideMenu">
-          <Menu className="menu" mode="inline" items={items} activeKey="none" />
-        </Sider>
-      </React.Fragment>
+      <Sider className="sideMenu">
+        <Menu className="menu" mode="inline" items={items} activeKey="none" />
+      </Sider>
     );
   }
 }

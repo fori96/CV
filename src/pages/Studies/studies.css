@@ -1,0 +1,45 @@
+.school-page {
+  padding: 30px;
+  width: 100%;
+}
+h3 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 8px 0px;
+}
+
+.school {
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+
+  .school-picture {
+    height: 180px;
+  }
+
+  .school-info {
+    flex-grow: 1;
+    margin-left: 32px;
+    position: relative;
+  }
+
+  .school-name {
+    padding: 0px 8px;
+    font-weight: 500;
+    font-size: 20px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  .city {
+    padding: 0px 8px;
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+}

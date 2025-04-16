@@ -23,6 +23,14 @@
   justify-content: center;
   border-bottom: 1px solid red;
   padding-left: 24px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed !important;
+  display: block;
+  box-sizing: border-box;
+  background-color: #8a8a8a;
+  z-index: 3;
 }
 
 @keyframes App-logo-spin {

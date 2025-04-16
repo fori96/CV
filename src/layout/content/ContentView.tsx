@@ -19,15 +19,15 @@ export interface ContentViewModel {
 export class Content extends View<ContentViewModel> {
   render(): ReactElement {
     return (
-      <div className="main">
+      <>
         <Header viewModel={this.viewModel.header} />
-        <Row>
+        <div className="container">
           <SideMenu viewModel={this.viewModel.sideMenu} />
           <div className="content">
-            <Outlet context={"lasjdf"} />
+            <Outlet context={"content"} />
           </div>
-        </Row>
-      </div>
+        </div>
+      </>
     );
   }
 }

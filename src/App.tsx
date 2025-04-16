@@ -26,18 +26,14 @@ export interface AppviewModel {
 export class App extends View<AppviewModel> {
   render(): ReactElement {
     return (
-      <div className="App">
-        <BrowserRouter>
+      <BrowserRouter>
+        <div className="App">
           <Routes>
             <Route
               path="/"
               element={<Content viewModel={this.viewModel.content} />}
             >
-              <Route
-                path="/Home"
-                index
-                element={<Home viewModel={this.viewModel.home} />}
-              />
+              <Route index element={<Home viewModel={this.viewModel.home} />} />
               <Route
                 path="/BasicInformation"
                 element={
@@ -60,8 +56,8 @@ export class App extends View<AppviewModel> {
               />
             </Route>
           </Routes>
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }

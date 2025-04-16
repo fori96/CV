@@ -1,7 +1,47 @@
+.info-page {
+  display: flex;
+}
+.portre-col {
+  width: fit-content;
+  margin: 24px;
+}
 .portre {
   width: 300px;
 }
 
-.ant-col {
+.infos {
+  flex-grow: 1;
+  width: fit-content;
   margin: 24px;
+  padding: 16px 0px;
+
+  .info {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 8px 0px;
+
+    .icon {
+      font-weight: 900;
+      font-size: 28px;
+      padding-right: 8px;
+    }
+
+    .key {
+      padding: 0px 8px;
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    .value {
+      padding-left: 8px;
+      font-weight: 500;
+      font-size: 20px;
+
+      a {
+        color: rgb(3, 5, 114);
+      }
+    }
+  }
 }

@@ -17,7 +17,7 @@ export class Header extends View<HeaderViewModel> {
     return (
       <React.Fragment>
         <div className="header">
-          <NavLink to="/Home">
+          <NavLink to="/">
             <div>
               <img src={logo} className="App-logo" alt="logo" />
               <label className="App-title">Önéletrajz</label>
