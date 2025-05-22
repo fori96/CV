@@ -14,8 +14,6 @@ import React, { ReactElement } from "react";
 import Portre from "../../assets/images/selfportre.jpg";
 import View from "../../View";
 
-//import { observer } from "mobx-react";
-
 export interface BasicInformationViewModel {
   loading: boolean;
 }
@@ -23,53 +21,49 @@ export interface BasicInformationViewModel {
 export class BasicInformation extends View<BasicInformationViewModel> {
   render(): ReactElement {
     return (
-      <div>
-        <Row className="info-page">
-          <Col className="portre-col">
-            <img src={Portre} className="portre" alt="portre" />
-          </Col>
-          <Col className="infos">
-            <Row className="info">
-              <ClockCircleOutlined className="icon" />
-              <label className="key">Született:</label>
-              <label className="value">1996.november.5</label>
-            </Row>
-            <Row className="info">
-              <EnvironmentOutlined className="icon" />
-              <label className="key">Lakcím:</label>
-              <label className="value">2898, Kocs Petőfi Sándor utca 54.</label>
-            </Row>
-            <Row className="info">
-              <MobileOutlined className="icon" />
-              <label className="key">Telefon:</label>
-              <label className="value">06/20-215-8359</label>
-            </Row>
-            <Row className="info">
-              <MailOutlined className="icon" />
-              <label className="key">Email:</label>
-              <label className="value">forisekbalint@gmail.com</label>
-            </Row>
-            <Row className="info">
-              <GithubOutlined className="icon" />
-              <label className="key">GitHub:</label>
-              <label className="value">
-                <a href="https://github.com/fori96">
-                  https://github.com/fori96
-                </a>
-              </label>
-            </Row>
-            <Row className="info">
-              <LinkedinOutlined className="icon" />
-              <label className="key">Linkedin:</label>
-              <label className="value">
-                <a href="https://www.linkedin.com/in/balintforisek-382529142/">
-                  https://www.linkedin.com/in/balintforisek-382529142/
-                </a>
-              </label>
-            </Row>
-          </Col>
-        </Row>
-      </div>
+      <Row className="info-page">
+        <Col className="portre-col">
+          <img src={Portre} className="portre" alt="portre" />
+        </Col>
+        <Col className="infos">
+          <Row className="info">
+            <ClockCircleOutlined className="icon" />
+            <label className="key">Született:</label>
+            <label className="value">1996.november.5</label>
+          </Row>
+          <Row className="info">
+            <EnvironmentOutlined className="icon" />
+            <label className="key">Lakcím:</label>
+            <label className="value">2898, Kocs Petőfi Sándor utca 54.</label>
+          </Row>
+          <Row className="info">
+            <MobileOutlined className="icon" />
+            <label className="key">Telefon:</label>
+            <label className="value">06/20-215-8359</label>
+          </Row>
+          <Row className="info">
+            <MailOutlined className="icon" />
+            <label className="key">Email:</label>
+            <label className="value">forisekbalint@gmail.com</label>
+          </Row>
+          <Row className="info">
+            <GithubOutlined className="icon" />
+            <label className="key">GitHub:</label>
+            <label className="value">
+              <a href="https://github.com/fori96">https://github.com/fori96</a>
+            </label>
+          </Row>
+          <Row className="info">
+            <LinkedinOutlined className="icon" />
+            <label className="key">Linkedin:</label>
+            <label className="value">
+              <a href="https://www.linkedin.com/in/balintforisek-382529142/">
+                https://www.linkedin.com/in/balintforisek-382529142/
+              </a>
+            </label>
+          </Row>
+        </Col>
+      </Row>
     );
   }
 }

@@ -1,13 +1,16 @@
-h2 {
-  position: absolute;
-  margin-top: 5%;
-  width: 100%;
-  text-align: center;
-}
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.sub-section {
-  width: 100%;
-  position: absolute;
-  margin-top: 7%;
-  text-align: center;
+  h2 {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  .sub-section {
+    margin-top: 10%;
+    position: absolute;
+    text-align: center;
+  }
 }
