@@ -1,0 +1,38 @@
+{
+    "schools": [
+        {
+            "name": "József Attila Általásno Iskola",
+            "type": "Általános iskola",
+            "city": "Oroszlány",
+            "startYear": 2003,
+            "endYear": 2011,
+            "details": ["Emelt matek ", "Végzős eredmény: 4.3 "],
+            "image": "/images/jozsef.jpg"
+        },
+        {
+            "name": "SZC Széchenyi István Gazdasági és Informatikai Technikum",
+            "type": "Középiskola",
+            "city": "Komárom",
+            "startYear": 2011,
+            "endYear": 2016,
+            "details": [
+                " 2 év német előkészítő",
+                "Emelt matek",
+                "Végzős eredmény: Érettségi (Emelt matek és informatika)"
+            ],
+            "image": "/images/szechenyi.jpg"
+        },
+        {
+            "name": "Pannon Egyetem - Műszaki Informatikai Kar",
+            "type": "Egyetem",
+            "city": "Veszprém",
+            "startYear": 2016,
+            "endYear": 2021,
+            "details": [
+                "Programtervező-informatiks szak",
+                "Végzős eredmény: Diploma (3)"
+            ],
+            "image": "/images/pemik.jpg"
+        }
+    ]
+}

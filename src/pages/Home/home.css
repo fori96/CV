@@ -1,0 +1,16 @@
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  .sub-section {
+    margin-top: 10%;
+    position: absolute;
+    text-align: center;
+  }
+}

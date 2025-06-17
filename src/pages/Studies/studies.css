@@ -1,0 +1,94 @@
+.school-page {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+h3 {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 8px 0px;
+}
+
+.school-card {
+    border-radius: 10px;
+    background-color: rgb(177, 174, 170);
+    box-shadow: 5px 5px rgb(0, 0, 0, 0.1);
+
+    margin: 16px;
+}
+
+.school-card:hover {
+    background-color: #b6b5b5;
+}
+
+.school {
+    padding: 8px;
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+
+    .school-picture {
+        width: 230px;
+        padding: 5px;
+        flex: 1;
+    }
+
+    .school-info {
+        flex-grow: 1;
+        margin-left: 32px;
+        display: flex;
+        width: 100%;
+        flex: 4;
+        flex-direction: column;
+
+        .head {
+            width: 100%;
+        }
+
+        .school-name {
+            font-weight: 500;
+            font-size: 20px;
+            padding: 0px 8px;
+        }
+        .city {
+            padding: 0px 8px;
+            font-weight: 500;
+            font-size: 18px;
+            float: right;
+        }
+
+        .time {
+            margin: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+        .details {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.additional {
+    border-radius: 10px;
+    background-color: rgb(175, 158, 144);
+    box-shadow: 5px 5px rgb(0, 0, 0, 0.1);
+    height: 95%;
+    margin: 16px;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+
+    .topic {
+        margin-top: 20px;
+    }
+
+    .topic-label {
+        font-weight: 600;
+        margin-right: 16px;
+    }
+}

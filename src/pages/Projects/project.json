@@ -1,0 +1,57 @@
+{
+    "projects": [
+        {
+            "name": "Tic-tac-toe",
+            "technology": "React.js",
+            "year": 2025,
+            "link": "https://github.com/fori96/Tic-tac-toe",
+            "description": "Egyszerű amőba játék. A React.js tudásom bemutatására. Valamint játékkészítési vágyam egyik terméke.",
+            "images": [
+                "/images/tic-tac-toe.jpg",
+                "/images/ttt1.jpg",
+                "/images/ttt2.jpg"
+            ]
+        },
+        {
+            "name": "Szakdolgozat / Caravan ",
+            "technology": "C#, .Net 3.1",
+            "year": 2020,
+            "link": "https://github.com/fori96/szakdolgozat",
+            "description": "Szakdolgozatom témája a .Net bemutatás és használatának előnyére fokuszált. Ennek keretén belül készítettem ezt a webalkalmazást gyakorlati prezentációként. Az oldal egy csomagszállító cég oldalát reprezentálja. Ezen az oldalon a cég alkalmazotja tudják módosítani a szállítással kapcsolatos adatokat, a felhasználok pedig csomagokat tudnak feladni illetve követni.",
+            "images": [
+                "/images/szakdoga.jpg",
+                "/images/szakdoga2.jpg",
+                "/images/szakdoga3.jpg"
+            ]
+        },
+        {
+            "name": "BlockBlaster",
+            "technology": "C#, Microsoft WPF",
+            "year": 2018,
+            "link": "https://github.com/fori96/Blockblaster",
+            "description": "Faltörő játék, ahol a tálcát mozgatva kell visszaütni a labdát és ezzel leszedni a faldarabokat. Az pontok mentésre kerülnek és később is láthatóak az eredményjelző táblában.",
+            "images": [
+                "/images/bb.jpg",
+                "/images/bb1.jpg",
+                "/images/bb2.jpg",
+                "/images/bb3.jpg"
+            ]
+        },
+        {
+            "name": "Önéletrajz",
+            "technology": "React.js, Typescript, Ant Design",
+            "year": 2025,
+            "link": "https://github.com/fori96/CV",
+            "description": "Önéletrajzom weboldalként. Portfolió reprezentáció. Jelenleg is ezt látja",
+            "images": ["/images/CV1.jpg", "/images/CV2.jpg", "/images/CV3.jpg"]
+        },
+        {
+            "name": "Css Tricks",
+            "technology": "React.js",
+            "year": 2025,
+            "link": "-",
+            "description": "Egyszerű React.js project, inkább a CSS vizuális megvalósításokra koncentrálva, SaSS segítségével.",
+            "images": ["/images/css.jpg", "/images/css.jpg", "/images/css.jpg"]
+        }
+    ]
+}

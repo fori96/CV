@@ -1,0 +1,132 @@
+.skills-page {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+
+    .skill-card {
+        display: flex;
+        height: fit-content;
+        width: 90%;
+        gap: 10px;
+        overflow: hidden;
+        margin: 8px 0px;
+
+        border-radius: 10px;
+        background-color: rgb(177, 174, 170);
+        box-shadow: 5px 5px rgb(0, 0, 0, 0.1);
+    }
+
+    .project-img {
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: flex 0.3s ease;
+        /* rotate: calc(15deg); */
+        clip-path: polygon(0 0, 30px 100%, 100% 100%, calc(100% - 30px) 0);
+        /* clip-path: polygon(30px 0, 0 100%, calc(100%- 30px) 100%, 100% 0) */
+        margin-right: -30px;
+
+        .zoom-icon {
+            display: block;
+            position: relative;
+            top: 50%;
+            font-size: 32px;
+            color: #53535327;
+        }
+    }
+
+    .project-img:hover {
+        flex: 2;
+    }
+
+    .project-detail {
+        flex: 3.5;
+        width: 60%;
+        margin: 16px;
+        display: flex;
+        flex-direction: column;
+
+        .project-name {
+            text-shadow: 2px 2px gray;
+            margin: 10px;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            text-overflow: ellipsis;
+            margin-top: 10px;
+
+            .info-name {
+                min-width: 200px;
+                font-weight: 600;
+            }
+
+            a:-webkit-any-link {
+                color: -webkit-link;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .description {
+                min-width: 20%;
+                width: 60%;
+            }
+        }
+    }
+}
+
+.ant-modal-wrap {
+    display: flex;
+    height: 100%;
+    overflow: hidden !important;
+}
+.modal-view {
+    width: 100% !important;
+
+    .ant-modal-content {
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+        top: -50px;
+
+        .ant-modal-close {
+            top: -40px;
+            color: white;
+            .ant-modal-close-x {
+                font-size: 28px;
+            }
+        }
+
+        .ant-modal-body {
+            .slick-slider {
+                .slick-arrow::after {
+                    height: 20px;
+                    width: 20px;
+                    border-inline-width: 5px 0;
+                    border-block-width: 5px 0;
+                }
+                .slick-track {
+                    height: 90vh !important;
+                }
+                .img {
+                    display: block !important;
+                    width: 120vh !important;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .ant-modal-footer {
+        visibility: hidden;
+    }
+}
