@@ -19,10 +19,9 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "build": "react-scripts build",
         "eject": "react-scripts eject",
-        "format": "npx prettier --write \"{**/*,*}.{ts,tsx,scss,json}\"",
-        "build": "babel src -d lib",
-        "test": "jest"
+        "format": "npx prettier --write \"{**/*,*}.{ts,tsx,scss,json}\""
     },
     "eslintConfig": {
         "extends": "react-app"
