@@ -27,7 +27,7 @@ export class Studies extends View<StudiesViewModel> {
         return (
             <div className="school-page">
                 <Row>
-                    <Col span={18}>
+                    <Col>
                         {this.viewModel.schools.map(
                             (school: Schools, id: number) => {
                                 return (
@@ -73,7 +73,7 @@ export class Studies extends View<StudiesViewModel> {
                             }
                         )}
                     </Col>
-                    <Col span={6}>
+                    <Col>
                         <div className="additional">
                             <h3>További kézségek</h3>
                             <label className="topic">Idegen nyelvek:</label>

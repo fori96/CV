@@ -1,8 +1,8 @@
 .navbar {
-    font-size: 32px;
     display: flex;
 
     .App-title {
+        font-size: 32px;
         pointer-events: none;
         vertical-align: middle;
         color: black !important;
@@ -14,10 +14,13 @@
 }
 .navbar.vertical {
     flex-direction: column;
-    width: 24vh;
+    width: 17%;
     height: 100%;
     border-right: 2px solid red;
 
+    .App-title {
+        font-size: 3vw;
+    }
     .page-title {
         padding: 2vh;
     }
@@ -27,7 +30,7 @@
         flex-direction: column;
 
         .ant-menu-item {
-            width: 20vh;
+            width: 80%;
             padding: 24px 0px;
             margin: 16px;
             font-weight: 600 !important;
@@ -42,33 +45,38 @@
     border-radius: 5px;
 }
 .navbar.horizontal {
-    height: 10vh;
+    height: 80px;
     flex-direction: row;
-    width: 100%;
     border-bottom: 2px solid red;
+    align-items: center;
 
     .page-title {
-        margin-right: 10px;
-        width: 20%;
+        margin-right: 150px;
         padding-left: 2vh;
-        padding-top: 2vh;
     }
 
     .menu {
+        display: inline;
         width: 90%;
-
         .ant-menu-item:hover {
             background-color: rgba(0, 0, 0, 0.06);
+        }
+        .ant-menu-overflow-item {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .ant-menu-submenu-item {
+            background-color: blue;
         }
     }
 }
 .menu {
     background-color: transparent;
-    align-items: center;
-    display: flex;
 
     .ant-menu-item {
-        padding: 16px;
+        padding: 8px 16px;
         margin: 8px 8px;
         font-weight: 600 !important;
         border: 1px solid rgba(107, 107, 107, 0.712);

@@ -24,7 +24,7 @@ export class ImageViewer extends View<ImageViewerViewModel> {
             >
                 <Carousel arrows infinite={false}>
                     {this.viewModel.images.map((img: string) => {
-                        return <img className="img" src={img} />;
+                        return <img className="img" alt={img} src={img} />;
                     })}
                 </Carousel>
             </Modal>

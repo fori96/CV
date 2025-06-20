@@ -48,5 +48,11 @@
         a {
             color: rgb(3, 5, 114);
         }
+        .value {
+            min-width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }

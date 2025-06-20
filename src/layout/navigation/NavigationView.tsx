@@ -1,10 +1,10 @@
 import "./navigation.css";
 
+import { Col, Menu, MenuProps, Row } from "antd";
 import {
     InsertRowAboveOutlined,
     InsertRowLeftOutlined,
 } from "@ant-design/icons";
-import { Menu, MenuProps } from "antd";
 import React, { ReactElement } from "react";
 
 import { NavLink } from "react-router-dom";
@@ -43,11 +43,11 @@ export class Navigation extends View<NavigationViewModel> {
     render(): ReactElement {
         return (
             <div className={`navbar ${this.viewModel.landscape}`}>
-                <div className="page-title">
+                <Col className="page-title">
                     <NavLink to="/">
                         <label className="App-title">Önéletrajz</label>
                     </NavLink>
-                </div>
+                </Col>
                 <Menu
                     className="menu"
                     mode={
@@ -58,7 +58,6 @@ export class Navigation extends View<NavigationViewModel> {
                     items={items}
                     activeKey="none"
                 />
-
                 {this.viewModel.landscape === "horizontal" ? (
                     <InsertRowLeftOutlined
                         className="menuPlacement"

@@ -1,14 +1,13 @@
-.skills-page {
-    display: flex;
+.project-page {
     padding: 30px;
-    flex-direction: column;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 
-    .skill-card {
+    .project-card {
         display: flex;
         height: fit-content;
         width: 90%;
-        gap: 10px;
         overflow: hidden;
         margin: 8px 0px;
 
@@ -17,16 +16,26 @@
         box-shadow: 5px 5px rgb(0, 0, 0, 0.1);
     }
 
+    .img-col {
+        display: flex;
+        flex-grow: 1;
+        .ant-row {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            overflow: hidden;
+        }
+    }
     .project-img {
         flex: 1;
+        min-height: 200px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         transition: flex 0.3s ease;
-        /* rotate: calc(15deg); */
         clip-path: polygon(0 0, 30px 100%, 100% 100%, calc(100% - 30px) 0);
-        /* clip-path: polygon(30px 0, 0 100%, calc(100%- 30px) 100%, 100% 0) */
         margin-right: -30px;
+        min-width: 150px;
 
         .zoom-icon {
             display: block;
@@ -42,11 +51,11 @@
     }
 
     .project-detail {
-        flex: 3.5;
         width: 60%;
-        margin: 16px;
-        display: flex;
-        flex-direction: column;
+        flex-grow: 1;
+
+        display: inline-table;
+        padding: 0px 8px 8px 16px;
 
         .project-name {
             text-shadow: 2px 2px gray;
@@ -60,12 +69,10 @@
         .project-info {
             display: flex;
             flex-direction: row;
-            width: 100%;
-            text-overflow: ellipsis;
             margin-top: 10px;
 
             .info-name {
-                min-width: 200px;
+                min-width: 150px;
                 font-weight: 600;
             }
 
@@ -76,8 +83,9 @@
             }
 
             .description {
-                min-width: 20%;
-                width: 60%;
+                display: flex;
+                align-items: center;
+                inset: 0;
             }
         }
     }

@@ -1,5 +1,6 @@
 import "./projects.css";
 
+import { Col, Row } from "antd";
 import ImageViewer, { ImageViewerViewModel } from "./ImageViewerView";
 import React, { ReactElement } from "react";
 
@@ -28,11 +29,11 @@ export interface ProjectsViewModel {
 export class Projects extends View<ProjectsViewModel> {
     render(): ReactElement {
         return (
-            <div className="skills-page">
+            <div className="project-page">
                 {this.viewModel.projects.map((project: Project, id: number) => {
                     return (
-                        <div className="skill-card" key={id}>
-                            <div className="project-detail">
+                        <Row className="project-card" key={id}>
+                            <Col className="project-detail">
                                 <h2 className="project-name">{project.name}</h2>
                                 <hr />
                                 <div className="project-info">
@@ -61,24 +62,28 @@ export class Projects extends View<ProjectsViewModel> {
                                         {project.description}
                                     </label>
                                 </div>
-                            </div>
-                            {project.images.map((img, idx) => {
-                                return (
-                                    <div
-                                        onClick={() =>
-                                            this.viewModel.openModal(id)
-                                        }
-                                        className="project-img"
-                                        style={{
-                                            backgroundImage: `url(${img}`,
-                                        }}
-                                        key={idx}
-                                    >
-                                        <ZoomInOutlined className="zoom-icon" />
-                                    </div>
-                                );
-                            })}
-                        </div>
+                            </Col>
+                            <Col className="img-col">
+                                <Row>
+                                    {project.images.map((img, idx) => {
+                                        return (
+                                            <div
+                                                onClick={() =>
+                                                    this.viewModel.openModal(id)
+                                                }
+                                                className="project-img"
+                                                style={{
+                                                    backgroundImage: `url(${img}`,
+                                                }}
+                                                key={idx}
+                                            >
+                                                <ZoomInOutlined className="zoom-icon" />
+                                            </div>
+                                        );
+                                    })}
+                                </Row>
+                            </Col>
+                        </Row>
                     );
                 })}
                 <ImageViewer viewModel={this.viewModel.imageViewer} />

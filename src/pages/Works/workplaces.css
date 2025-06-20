@@ -7,19 +7,18 @@
 }
 
 .work {
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 80%;
+
     height: fit-content;
     margin-bottom: 32px;
-    flex-direction: row;
     border-radius: 10px;
     background-color: rgb(177, 174, 170);
     box-shadow: 5px 5px rgb(0, 0, 0, 0.1);
+    padding: 16px;
 
     .work-info {
-        margin: 16px;
+        width: 70%;
         .position-name {
             font-weight: 500;
             font-size: 20px;
@@ -30,6 +29,7 @@
             font-size: 20px;
             float: right;
             margin: 0px 8px;
+            display: block;
         }
         .location {
             font-size: 16px;
@@ -40,9 +40,15 @@
     }
 
     .picture {
-        margin: 16px;
-        width: 40vh;
-        height: fit-content;
-        filter: drop-shadow(3px 3px 3px black);
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 30%;
+        min-width: 250px;
+        .img {
+            min-width: 250px;
+            height: fit-content;
+            filter: drop-shadow(3px 3px 3px black);
+        }
     }
 }
