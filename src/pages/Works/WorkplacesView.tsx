@@ -17,13 +17,20 @@ export class Workplaces extends View<WorkplacesViewModel> {
                 <div className="work">
                     <Row>
                         <Col className="work-info">
-                            <label className="position-name">
-                                Szoftverfejlesztő (front-end)
-                            </label>
-                            <label className="location">Győr</label>
-                            <label className="company">
-                                think & vision kft.
-                            </label>
+                            <Row>
+                                <Col>
+                                    <label className="position-name">
+                                        Szoftverfejlesztő (front-end)
+                                    </label>
+                                </Col>
+                                <Col>
+                                    <label className="location">Győr</label>
+                                    <label className="company">
+                                        think & vision kft.
+                                    </label>
+                                </Col>
+                            </Row>
+
                             <div className="details">
                                 <label className="time">
                                     2020.november - 2025.február

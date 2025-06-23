@@ -2,6 +2,7 @@ import "./home.css";
 
 import React, { ReactElement } from "react";
 
+import { Col } from "antd";
 import View from "../../View";
 
 export interface HomeViewModel {
@@ -11,7 +12,7 @@ export interface HomeViewModel {
 export class Home extends View<HomeViewModel> {
     render(): ReactElement {
         return (
-            <div className="landing-page">
+            <Col className="landing-page">
                 <h2>Üdvözlöm!</h2>
                 <div className="sub-section">
                     <h4>Ez az önéletrajzom webapp-os változata.</h4>
@@ -20,7 +21,7 @@ export class Home extends View<HomeViewModel> {
                         prezentálására.
                     </h4>
                 </div>
-            </div>
+            </Col>
         );
     }
 }

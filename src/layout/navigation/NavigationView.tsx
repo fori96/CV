@@ -1,6 +1,6 @@
 import "./navigation.css";
 
-import { Col, Menu, MenuProps, Row } from "antd";
+import { Col, Menu, MenuProps } from "antd";
 import {
     InsertRowAboveOutlined,
     InsertRowLeftOutlined,

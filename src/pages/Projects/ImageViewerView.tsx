@@ -10,6 +10,7 @@ export interface ImageViewerViewModel {
     isModalOpen: boolean;
     onCancel(): void;
     images: string[];
+    active: number;
 }
 
 @observer

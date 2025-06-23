@@ -7,6 +7,7 @@ export class ImageViewerController implements Controller<ImageViewerViewModel> {
         isModalOpen: false,
         onCancel: () => this.onCancel(),
         images: [],
+        active: 0,
     };
 
     //TODO: load skills from backend maybe

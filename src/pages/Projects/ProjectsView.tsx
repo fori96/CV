@@ -20,7 +20,7 @@ export interface Project {
 export interface ProjectsViewModel {
     loading: boolean;
     projects: Project[];
-    openModal(id: number): void;
+    openModal(projectId: number, imgId: number): void;
 
     imageViewer: ImageViewerViewModel;
 }
@@ -30,62 +30,73 @@ export class Projects extends View<ProjectsViewModel> {
     render(): ReactElement {
         return (
             <div className="project-page">
-                {this.viewModel.projects.map((project: Project, id: number) => {
-                    return (
-                        <Row className="project-card" key={id}>
-                            <Col className="project-detail">
-                                <h2 className="project-name">{project.name}</h2>
-                                <hr />
-                                <div className="project-info">
-                                    <label className="info-name">
-                                        Használt technológia:
-                                    </label>
-                                    <label>{project.technology}</label>
-                                </div>
-                                <div className="project-info">
-                                    <label className="info-name">
-                                        Készítés éve:
-                                    </label>
-                                    <label>{project.year}</label>
-                                </div>
-                                <div className="project-info">
-                                    <label className="info-name">Link:</label>
-                                    <label>
-                                        <a href={project.link}>
-                                            {project.link}
-                                        </a>
-                                    </label>
-                                </div>
-                                <div className="project-info">
-                                    <label className="info-name">Leírás:</label>
-                                    <label className="description">
-                                        {project.description}
-                                    </label>
-                                </div>
-                            </Col>
-                            <Col className="img-col">
-                                <Row>
-                                    {project.images.map((img, idx) => {
-                                        return (
-                                            <div
-                                                onClick={() =>
-                                                    this.viewModel.openModal(id)
-                                                }
-                                                className="project-img"
-                                                style={{
-                                                    backgroundImage: `url(${img}`,
-                                                }}
-                                                key={idx}
-                                            >
-                                                <ZoomInOutlined className="zoom-icon" />
-                                            </div>
-                                        );
-                                    })}
-                                </Row>
-                            </Col>
-                        </Row>
-                    );
-                })}
+                {this.viewModel.projects.map(
+                    (project: Project, projectId: number) => {
+                        return (
+                            <Row className="project-card" key={projectId}>
+                                <Col className="project-detail">
+                                    <h2 className="project-name">
+                                        {project.name}
+                                    </h2>
+                                    <hr />
+                                    <div className="project-info">
+                                        <label className="info-name">
+                                            Használt technológia:
+                                        </label>
+                                        <label>{project.technology}</label>
+                                    </div>
+                                    <div className="project-info">
+                                        <label className="info-name">
+                                            Készítés éve:
+                                        </label>
+                                        <label>{project.year}</label>
+                                    </div>
+                                    <div className="project-info">
+                                        <label className="info-name">
+                                            Link:
+                                        </label>
+                                        <label>
+                                            <a href={project.link}>
+                                                {project.link}
+                                            </a>
+                                        </label>
+                                    </div>
+                                    <div className="project-info">
+                                        <label className="info-name">
+                                            Leírás:
+                                        </label>
+                                        <label className="description">
+                                            {project.description}
+                                        </label>
+                                    </div>
+                                </Col>
+                                <Col className="img-col">
+                                    <Row>
+                                        {project.images.map((img, imgId) => {
+                                            return (
+                                                <div
+                                                    onClick={() =>
+                                                        this.viewModel.openModal(
+                                                            projectId,
+                                                            imgId
+                                                        )
+                                                    }
+                                                    className="project-img"
+                                                    style={{
+                                                        backgroundImage: `url(${img}`,
+                                                    }}
+                                                    key={imgId}
+                                                >
+                                                    <ZoomInOutlined className="zoom-icon" />
+                                                </div>
+                                            );
+                                        })}
+                                    </Row>
+                                </Col>
+                            </Row>
+                        );
+                    }
+                )}
                 <ImageViewer viewModel={this.viewModel.imageViewer} />
             </div>
         );

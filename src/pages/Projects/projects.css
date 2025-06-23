@@ -8,6 +8,7 @@
         display: flex;
         height: fit-content;
         width: 90%;
+        min-width: 370px;
         overflow: hidden;
         margin: 8px 0px;
 
@@ -90,51 +91,49 @@
         }
     }
 }
-
-.ant-modal-wrap {
-    display: flex;
-    height: 100%;
-    overflow: hidden !important;
-}
-.modal-view {
-    width: 100% !important;
+.ant-modal {
+    width: 70% !important;
+    top: 10px;
 
     .ant-modal-content {
         background-color: transparent;
         box-shadow: none;
-        width: 100%;
-        height: auto;
-        top: -50px;
-
         .ant-modal-close {
-            top: -40px;
-            color: white;
+            color: rgba(255, 255, 255, 0.479);
             .ant-modal-close-x {
                 font-size: 28px;
             }
         }
-
-        .ant-modal-body {
-            .slick-slider {
-                .slick-arrow::after {
-                    height: 20px;
-                    width: 20px;
-                    border-inline-width: 5px 0;
-                    border-block-width: 5px 0;
-                }
-                .slick-track {
-                    height: 90vh !important;
-                }
-                .img {
-                    display: block !important;
-                    width: 120vh !important;
-                    margin: auto;
-                }
+    }
+    .ant-modal-body {
+        height: 90% !important;
+        .slick-slider {
+            .slick-arrow {
+                width: 40px;
+                height: 40px;
+            }
+            .slick-arrow::after {
+                width: 40px;
+                height: 40px;
+                border-inline-width: 10px 0;
+                border-block-width: 10px 0;
+            }
+            .slick-slide {
+                position: relative;
+                top: 50px;
+            }
+            .img {
+                display: flex !important;
+                max-width: 70% !important;
+                margin: auto;
+                position: relative;
+                margin: 30px;
+                align-self: center;
+                justify-self: center;
             }
         }
     }
-
     .ant-modal-footer {
-        visibility: hidden;
+        display: none;
     }
 }

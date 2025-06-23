@@ -10,7 +10,8 @@ export class ProjectsController implements Controller<ProjectsViewModel> {
     viewModel: ProjectsViewModel = {
         loading: false,
         projects: [],
-        openModal: (id: number) => this.openModal(id),
+        openModal: (projectId: number, imgId: number) =>
+            this.openModal(projectId, imgId),
         imageViewer: this.imageViewer.viewModel,
     };
 
@@ -26,8 +27,10 @@ export class ProjectsController implements Controller<ProjectsViewModel> {
         this.viewModel.projects = projects.projects;
     }
 
-    private openModal(id: number) {
-        this.viewModel.imageViewer.images = this.viewModel.projects[id].images;
+    private openModal(projectId: number, imgId: number) {
+        this.viewModel.imageViewer.images =
+            this.viewModel.projects[projectId].images;
+        this.viewModel.imageViewer.active = imgId;
         this.viewModel.imageViewer.isModalOpen =
             !this.viewModel.imageViewer.isModalOpen;
     }
