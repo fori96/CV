@@ -1,13 +1,31 @@
 .landing-page {
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.greeting-section {
     align-items: center;
 
     h2 {
         margin-top: 5%;
         text-align: center;
+        font-size: 65px;
     }
 
     .sub-section {
         margin-top: 10%;
         text-align: center;
+        font-size: 25px;
+    }
+
+    @media screen and (max-width: 400px) {
+        h2 {
+            font-size: 45px;
+        }
+
+        .sub-section {
+            margin-top: 2%;
+            font-size: 18px;
+        }
     }
 }
