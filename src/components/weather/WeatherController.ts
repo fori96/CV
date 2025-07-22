@@ -3,8 +3,6 @@ import { WeatherViewModel } from "./WeatherView";
 import axios from "axios";
 import { makeAutoObservable } from "mobx";
 
-const WEATHER_API_KEY = "ad496bc23d3a0d84a7ce4a006ab0ca4d";
-
 export class WeatherController implements Controller<WeatherViewModel> {
     viewModel: WeatherViewModel = {
         loading: true,
@@ -22,12 +20,12 @@ export class WeatherController implements Controller<WeatherViewModel> {
 
     private async fetchData(location: string) {
         try {
-            const response = await axios(
-                `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${WEATHER_API_KEY}`
+            const response = await axios.get(
+                `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
             );
             if (response !== undefined) {
                 this.viewModel.weatherData = response.data;
-                const icon = await axios(
+                const icon = await axios.get(
                     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
                 );
                 if (icon) {
