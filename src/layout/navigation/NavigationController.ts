@@ -8,18 +8,10 @@ import { makeAutoObservable } from "mobx";
 export class NavigationController implements Controller<NavigationViewModel> {
     viewModel: NavigationViewModel = {
         loading: false,
-        landscape: "horizontal",
-        changeMenuPlacement: () => this.changeMenuPlacement(),
     };
 
     constructor() {
         makeAutoObservable(this);
-    }
-
-    changeMenuPlacement(): void {
-        this.viewModel.landscape === "horizontal"
-            ? (this.viewModel.landscape = "vertical")
-            : (this.viewModel.landscape = "horizontal");
     }
 }
 

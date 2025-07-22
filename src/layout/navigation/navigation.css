@@ -1,5 +1,9 @@
 .navbar {
     display: flex;
+    height: 80px;
+    flex-direction: row;
+    border-bottom: 2px solid red;
+    align-items: center;
 
     .App-title {
         font-size: 32px;
@@ -11,91 +15,68 @@
         text-shadow: 3px 3px rgb(105, 105, 105);
         border-bottom: 1px solid;
     }
-}
-.navbar.vertical {
-    flex-direction: column;
-    width: 17%;
-    height: 100%;
-    border-right: 2px solid red;
-
-    .App-title {
-        font-size: 3vw;
-    }
-    .page-title {
-        padding: 2vh;
-    }
-
-    .menu {
-        height: 100%;
-        flex-direction: column;
-
-        .ant-menu-item {
-            width: 80%;
-            padding: 24px 0px;
-            margin: 16px;
-            font-weight: 600 !important;
-        }
-    }
-}
-.menuPlacement {
-    align-self: center;
-    margin: 5px;
-    font-size: 20px;
-    border-radius: 5px;
-}
-.navbar.horizontal {
-    height: 80px;
-    flex-direction: row;
-    border-bottom: 2px solid red;
-    align-items: center;
-
     .page-title {
         margin-right: 150px;
         padding-left: 2vh;
     }
 
+    .menu-wrapper {
+        max-width: 700;
+        flex: auto;
+        min-width: 0;
+    }
+
     .menu {
-        display: inline;
-        width: 90%;
+        width: 100%;
+        background-color: transparent;
+
         .ant-menu-item:hover {
             background-color: rgba(0, 0, 0, 0.06);
         }
         .ant-menu-overflow-item {
             border: 1px solid black;
+        }
+
+        .ant-menu-item {
+            font-weight: 600 !important;
+            border: 1px solid rgba(107, 107, 107, 0.712);
+            border-radius: 10px !important;
+            box-shadow: 2px 2px;
+        }
+
+        .ant-menu-overflow-item {
+            border: 1px solid black;
             border-radius: 20px;
             margin-right: 10px;
         }
-
-        .ant-menu-submenu-item {
-            background-color: blue;
-        }
     }
 }
-.menu {
-    background-color: transparent;
-
-    .ant-menu-item {
-        padding: 8px 16px;
-        margin: 8px 8px;
-        font-weight: 600 !important;
-        border: 1px solid rgba(107, 107, 107, 0.712);
-        border-radius: 10px !important;
-        box-shadow: 2px 2px;
-    }
+.ant-menu-item:hover::after {
+    border-bottom-width: 0px;
+    border-bottom-color: transparent !important;
 }
+.ant-menu-submenu:hover::after {
+    border-bottom-color: transparent !important;
+}
+.ant-menu-sub {
+    background-color: #5f5f5f !important;
 
-.ant-menu-item-selected {
-    background-color: transparent !important;
-    text-decoration: none !important;
-    color: black !important;
+    .ant-menu-item:active {
+        background-color: #969696dc !important;
+    }
 }
 
 .ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after {
     border-bottom-width: 2px;
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
+}
+
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected:active {
+    border-bottom-width: 2px;
+    border-bottom-color: transparent !important;
 }
 
 .ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after {
     border-bottom-width: 2px;
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
 }

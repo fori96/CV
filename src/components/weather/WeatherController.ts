@@ -26,7 +26,6 @@ export class WeatherController implements Controller<WeatherViewModel> {
                 `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${WEATHER_API_KEY}`
             );
             if (response !== undefined) {
-                console.log(response.data);
                 this.viewModel.weatherData = response.data;
                 const icon = await axios(
                     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

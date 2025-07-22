@@ -19,7 +19,7 @@ export class Content extends View<ContentViewModel> {
     render(): ReactElement {
         return (
             <>
-                <div className={`container ${this.viewModel.navBar.landscape}`}>
+                <div className={`container`}>
                     <Navigation viewModel={this.viewModel.navBar} />
                     <div className="content">
                         <Outlet context={"content"} />

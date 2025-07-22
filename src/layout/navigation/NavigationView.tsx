@@ -1,10 +1,6 @@
 import "./navigation.css";
 
 import { Col, Menu, MenuProps } from "antd";
-import {
-    InsertRowAboveOutlined,
-    InsertRowLeftOutlined,
-} from "@ant-design/icons";
 import React, { ReactElement } from "react";
 
 import { NavLink } from "react-router-dom";
@@ -33,42 +29,27 @@ const items: MenuItem[] = [
 ];
 
 export interface NavigationViewModel {
-    landscape: string;
     loading: boolean;
-    changeMenuPlacement(): void;
 }
 
 @observer
 export class Navigation extends View<NavigationViewModel> {
     render(): ReactElement {
         return (
-            <div className={`navbar ${this.viewModel.landscape}`}>
+            <div className={`navbar`}>
                 <Col className="page-title">
                     <NavLink to="/">
                         <label className="App-title">Önéletrajz</label>
                     </NavLink>
                 </Col>
-                <Menu
-                    className="menu"
-                    mode={
-                        this.viewModel.landscape === "horizontal"
-                            ? "horizontal"
-                            : "inline"
-                    }
-                    items={items}
-                    activeKey="none"
-                />
-                {this.viewModel.landscape === "horizontal" ? (
-                    <InsertRowLeftOutlined
-                        className="menuPlacement"
-                        onClick={() => this.viewModel.changeMenuPlacement()}
+                <div className="menu-wrapper">
+                    <Menu
+                        className="menu"
+                        items={items}
+                        activeKey="none"
+                        mode="horizontal"
                     />
-                ) : (
-                    <InsertRowAboveOutlined
-                        className="menuPlacement"
-                        onClick={() => this.viewModel.changeMenuPlacement()}
-                    />
-                )}
+                </div>
             </div>
         );
     }
