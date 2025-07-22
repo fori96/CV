@@ -80,3 +80,21 @@
     border-bottom-width: 2px;
     border-bottom-color: transparent !important;
 }
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-selected::after {
+    border-bottom-width: 2px;
+    border-bottom-color: transparent !important;
+}
+.ant-menu-submenu-selected > .ant-menu-submenu-title {
+    color: rgba(0, 0, 0, 0.88) !important;
+}
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-open:after {
+    border-bottom-width: 2px;
+    border-bottom-color: transparent !important;
+}
+.ant-menu-horizontal > .ant-menu-item-selected {
+    color: rgba(0, 0, 0, 0.88) !important;
+}
+.ant-menu-light > .ant-menu .ant-menu-item-selected {
+    background-color: #969696dc !important;
+    color: rgba(0, 0, 0, 0.88) !important;
+}
